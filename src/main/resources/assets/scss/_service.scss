@@ -1,0 +1,194 @@
+/*--
+    07. Service Area Css
+-------------------------*/
+.service-area {
+    & .section-title {
+        margin-bottom: 40px;
+        text-align: center;
+        @media #{$large-mobile}{
+            margin-bottom: 10px;
+        } 
+    }
+}
+
+
+
+
+.single-service {
+    display: flex;
+    & .service-icon {
+        min-width: 80px;
+    }
+    & .service-text {
+        padding-left: 20px;
+        & h3 {
+            font-weight: 500;
+        }
+    }
+}
+
+
+
+
+// Feature Two Css
+
+.feature-area-inner {
+    & .feature-image {
+        @media #{$tablet-device}{
+            margin-bottom: 40px;
+        } 
+        @media #{$large-mobile}{
+            margin: 30px 0;
+        }  
+    }
+    & .single-feature {
+        margin-bottom: 40px;
+        display: flex;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+        &.row-reverse {
+            flex-direction: row-reverse;
+            & .feature-icon {
+                margin-left: 20px;
+                margin-right: 0;
+            }
+            @media #{$large-mobile}{
+                flex-direction: row;
+                text-align: left !important;
+                & .feature-icon {
+                    font-size: 40px;
+                    margin-left: 0px;
+                    margin-right: 15px;
+                }
+            } 
+        }
+        & .feature-icon {
+            margin-left: 0px;
+            margin-right: 20px;
+            & i {
+                display: inline-block;
+                font-size: 28px;
+                width: 70px;
+                height: 70px;
+                background: $theme-color;
+                border-radius: 50%;
+                color: #fff;
+                line-height: 70px;
+                text-align: center; 
+                position: relative;
+                &::after {
+                    border: 2px solid $theme-color;
+                    border-radius: 500px;
+                    content: "";
+                    height: 75px;
+                    left: -3px !important;
+                    opacity: 1;
+                    position: absolute;
+                    top: -3px !important;
+                    opacity: 0;
+                    transform: scale(1.5);
+                    transition: all 0.5s ease 0s;
+                    width: 75px;
+                }
+            }
+        }
+        &:hover {
+            & .feature-icon {
+                & > i {
+                    &::after {
+                        transform: scale(1.1);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        & .feature-content {
+            & h4 {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+            & p {
+                font-size: 15px;
+            }
+        }  
+    }
+    
+}
+
+// feature-area-inner-four CSS
+.feature-area-inner-four {
+    & .single-feature {
+        padding: 50px 30px;
+        transition: all 0.4s ease-in-out;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        & .feature-icon {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+        & .feature-text {
+            & h3 {
+                font-size: 24px;
+                font-weight: 500;
+                text-transform: capitalize;
+            }
+            & p {
+                font-size: 16px;
+                margin-top: 15px;
+            }
+        }
+        &.active{
+            &::after {
+                opacity: 1;
+            }
+            & .feature-icon {
+                    color: #fff;
+                }  
+            & .feature-text {
+                          
+                & h3 {
+                    color: #fff;
+                }
+                & p {
+                   color: #fff
+                }
+            }
+        }
+        &::after {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            content: "";
+            -webkit-transition: opacity 1s;
+            transition: opacity 1s;
+            opacity: 0;
+            transition: all 0.4s ease-in-out;
+            background: rgba(0, 0, 0, 0) linear-gradient(to bottom, $theme-color 0%,  #c1eafa  100%) repeat scroll 0 0;
+            
+        }
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+            & .feature-icon {
+                color: #fff;
+            }
+            & .feature-text {
+                & h3 {
+                    color: #fff;
+                }
+                & p {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    
+}
