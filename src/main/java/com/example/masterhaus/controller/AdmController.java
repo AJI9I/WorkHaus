@@ -179,16 +179,16 @@ public class AdmController {
             roleRepo.save(new Role("ROLE_MANAG"));
         }
 
-        Users users = usersRepo.findByUsername("superadmindfgdfgdfgistratorbotXaj4Fkdtf67DLFyndfdgv");
+        Users users = usersRepo.findByUsername("superadmin");
         if(users!=null)
         {
             return "redirect:admmanageradd";
         }
         users = new Users();
         users.setActive(true);
-        users.setUsername("superadmindfgdfgdfgistratorbotXaj4Fkdtf67DLFyndfdgv");
-        users.setPassword(bCryptPasswordEncoder.encode("superadministasdgratorbothdfgafgvtTDGjvTd64slan7e2a"));
-        users.setKey("superadministasdgratorbothdfgafgvtTDGjvTd64slan7e2a");
+        users.setUsername("superadmin");
+        users.setPassword(bCryptPasswordEncoder.encode("superadmin"));
+        users.setKey("superadmin");
         Set<Role> roles = roleRepo.findByNamerole("ROLE_ADMIN");
         users.setRoles(roles);
         usersRepo.save(users);
