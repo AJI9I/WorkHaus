@@ -69,7 +69,7 @@ public abstract class MyBot  extends TelegramLongPollingBot {
 //
 //    @Override
 //    public String getBotToken() {
-//        return "1246129396:AAFuG8KgB9iwfcbykt9JNPKJc4jCMNBWRo0";
+//        return "";
 //    }
 
     //Для тестов
@@ -80,7 +80,7 @@ public abstract class MyBot  extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
-        return "1051200818:AAHXT19wKzvn2LUHN4QVdr9N2uRSFsfks2U";
+        return "";
     }
 
 
